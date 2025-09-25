@@ -1,14 +1,6 @@
-import { useContext } from "react";
 import { Link } from "react-router-dom";
-import { Ctx } from "../auth/AuthContext";
 
 const Navbar: React.FC = () => {
-  const auth = useContext(Ctx);
-
-  // const isLoggedIn = auth.isLoggedIn === true;
-  // const userRole = auth.user;
-  // const navigate = useNavigate();
-
   return (
     <nav className="flex items-center justify-between bg-gray-800 p-4 text-white">
       <div className="font-bold text-lg">Pensioner</div>

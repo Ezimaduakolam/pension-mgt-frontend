@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+
 import PensionerForm from "../components/PensionerForm";
 import PensionerTable from "../components/PensionerTable";
 import Navbar from "../components/Navbar";
@@ -7,9 +7,9 @@ import Navbar from "../components/Navbar";
 export default function Dashboard() {
   const [edit, setEdit] = useState<any>(null);
   const [reload, setReload] = useState(0);
-  const navigate = useNavigate();
+
   // Check localStorage on load
-  const [isLoggedIn, setIsLoggedIn] = useState<boolean>(() => {
+  const isLoggedIn = useState<boolean>(() => {
     const saved = localStorage.getItem("isLoggedIn");
     return saved === "true"; // convert string back to boolean
   });
